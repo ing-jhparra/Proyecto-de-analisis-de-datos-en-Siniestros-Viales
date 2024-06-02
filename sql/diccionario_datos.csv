@@ -1,0 +1,39 @@
+"nombre_tabla";"nombre_columna";"tipo_datos";"precision_numerica"
+comuna;area;numeric;16
+comuna;barrios;character varying;
+comuna;objeto;character varying;
+comuna;id_comuna;integer;32
+comuna;comuna;integer;32
+comuna;perimetro;numeric;16
+siniestros;fecha;date;
+siniestros;id_comuna;integer;32
+siniestros;id_tipocalle;integer;32
+siniestros;id_tipoparticipante;integer;32
+siniestros;id_tipovictima;integer;32
+siniestros;id_tipoacusado;integer;32
+siniestros;id_siniestro;integer;32
+siniestros;id_victima;integer;32
+siniestros;direccion_siniestro;character varying;
+siniestros;latitud;character varying;
+siniestros;lugar_hecho;character varying;
+siniestros;hora;character varying;
+siniestros;edad_etaria;character varying;
+siniestros;cantidad_victimas;integer;32
+siniestros;longitud;character varying;
+tipo_acusado;tipo_acusado;character varying;
+tipo_acusado;id_tipoacusado;integer;32
+tipo_calle;id_tipocalle;integer;32
+tipo_calle;tipo_calle;character varying;
+tipo_participante;id_tipoparticipante;integer;32
+tipo_participante;tipo_participantes;character varying;
+tipo_rol;rol;character varying;
+tipo_rol;id_tiporol;integer;32
+tipo_victima;id_tipovictima;integer;32
+tipo_victima;tipo_victima;character varying;
+victimas;fecha;date;
+victimas;codigo_siniestro;character varying;
+victimas;sexo_victima;character varying;
+victimas;edad_victima;character varying;
+victimas;fecha_fallecimiento;character varying;
+victimas;id_victima;integer;32
+victimas;id_tiporol;integer;32
