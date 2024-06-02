@@ -47,7 +47,8 @@ Ambiente de base de datos
 ![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-
+</center>
+<br>
 
 - Ambiente de Desarrollo<br>
 <center>
@@ -59,6 +60,7 @@ Ambiente de base de datos
 ![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC)
 ![Jupyter Notebooks](https://img.shields.io/badge/-Jupyter_Notebook-333333?style=flat&logo=jupyter)
 </center>
+<br>
 
 - Desarrollo del Dashboard<br>
 <center>
