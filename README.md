@@ -51,6 +51,7 @@ Ambiente de base de datos
 <br>
 
 - Ambiente de Desarrollo<br>
+
 <center>
 ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
 ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
@@ -63,6 +64,7 @@ Ambiente de base de datos
 <br>
 
 - Desarrollo del Dashboard<br>
+
 <center>
 ![Power BI](https://img.shields.io/badge/PowerBI-333333?style=flat&logo=powerbi)
 ![DAX](https://img.shields.io/badge/-DAX-333333?style=flat&logo=powerbi)
