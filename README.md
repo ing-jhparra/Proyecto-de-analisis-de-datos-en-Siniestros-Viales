@@ -39,6 +39,37 @@ Machine Learning está transformando diversos sectores : Salud, Finanzas, Market
 
 # Tecnólogias utilizadas
 
+Ambiente de base de datos 
+
+- Ambiente de base de Datos<br>
+
+<center>
+![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+
+
+- Ambiente de Desarrollo<br>
+<center>
+![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
+![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
+![Numpy](https://img.shields.io/badge/-Numpy-333333?style=flat&logo=numpy)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-333333?style=flat&logo=WordCloud)
+![Seaborn](https://img.shields.io/badge/Seaborn-333333?style=flat&logo=Seaborn)
+![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC)
+![Jupyter Notebooks](https://img.shields.io/badge/-Jupyter_Notebook-333333?style=flat&logo=jupyter)
+</center>
+
+- Desarrollo del Dashboard<br>
+<center>
+![Power BI](https://img.shields.io/badge/PowerBI-333333?style=flat&logo=powerbi)
+![DAX](https://img.shields.io/badge/-DAX-333333?style=flat&logo=powerbi)
+</center>
+
+
+
+
+
 
 # Análisis Exploratorio de Datos (EDA):
 
@@ -72,7 +103,7 @@ Aca la estructura sql de la [base de datos](sql/2_base_de_datos_siniestros_viale
 
 Y el [diccionario de datos](sql/diccionario_datos.csv) en formato csv
 
-Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque en servidor la direccion IP y el puerto (Ejemplo **196.81.221.106:5433**), nombre de la base de dato (Ejemplo **siniestros_viales**) y dele clic al botón **Aceptar**
+Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque en servidor la direccion IP y el puerto (Ejemplo **196.81.221.106:5433**), nombre de la base de datos (Ejemplo **siniestros_viales**) y haz clic al botón **Aceptar**
 
 ![Conexión de Power BI a la base de datos](img/conexion_postgres.png)
 
