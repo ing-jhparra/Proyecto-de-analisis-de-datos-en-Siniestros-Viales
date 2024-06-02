@@ -72,7 +72,7 @@ Aca la estructura sql de la [base de datos](sql/2_base_de_datos_siniestros_viale
 
 Y el [diccionario de datos](sql/diccionario_datos.csv) en formato csv
 
-Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque en servidor la direccion IP (Ejemplo 196.81.221.106:5433), nombre de la base de dato (Ejemplo siniestros_viales) y dele clic al botón **Aceptar**
+Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque en servidor la direccion IP y el puerto (Ejemplo **196.81.221.106:5433**), nombre de la base de dato (Ejemplo **siniestros_viales**) y dele clic al botón **Aceptar**
 
 ![Conexión de Power BI a la base de datos](img/conexion_postgres.png)
 
