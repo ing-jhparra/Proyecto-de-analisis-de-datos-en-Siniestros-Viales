@@ -42,26 +42,26 @@ Machine Learning está transformando diversos sectores : Salud, Finanzas, Market
 Ambiente de base de datos 
 
 - Ambiente de base de Datos<br><center>
-![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql)
 </center>
 <br>
 
 - Ambiente de Desarrollo<br><center>
-![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas&logoColor=white)
-![Numpy](https://img.shields.io/badge/-Numpy-333333?style=flat&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-333333?style=flat&logo=WordCloud&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-333333?style=flat&logo=Seaborn&logoColor=white)
-![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=white)
-![Jupyter Notebooks](https://img.shields.io/badge/-Jupyter_Notebook-333333?style=flat&logo=jupyter&logoColor=white)
+![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
+![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
+![Numpy](https://img.shields.io/badge/-Numpy-333333?style=flat&logo=numpy)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-333333?style=flat&logo=WordCloud)
+![Seaborn](https://img.shields.io/badge/Seaborn-333333?style=flat&logo=Seaborn)
+![Visual Studio Code](https://img.shields.io/badge/-Visual%20Studio%20Code-333333?style=flat&logo=visual-studio-code&logoColor=007ACC)
+![Jupyter Notebooks](https://img.shields.io/badge/-Jupyter_Notebook-333333?style=flat&logo=jupyter)
 </center>
 <br>
 
 - Desarrollo del Dashboard<br><center>
-![Power BI](https://img.shields.io/badge/PowerBI-333333?style=flat&logo=powerbi&logoColor=white)
-![DAX](https://img.shields.io/badge/-DAX-333333?style=flat&logo=powerbi&logoColor=white)
+![Power BI](https://img.shields.io/badge/PowerBI-333333?style=flat&logo=powerbi)
+![DAX](https://img.shields.io/badge/-DAX-333333?style=flat&logo=powerbi)
 </center>
 
 
