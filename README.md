@@ -12,7 +12,7 @@
 
 * [Análisis y Desarrollo de Datos (EDA)](Análisis-y-Desarrollo-de-los-Datos-(EDA))
 
-* [El Modelo de Datos][El-Modelo-de-Datos]
+* [El Modelo de Datos](#El-Modelo-de-Datos)
 
 * [Indicador clave de rendimiento (KPI)](Indicador-clave-de-rendimiento)
 
@@ -72,6 +72,9 @@ Aca la estructura sql de la [base de datos](sql/2_base_de_datos_siniestros_viale
 
 Y el [diccionario de base de datos](sql/diccionario_datos.csv) en formato csv
 
+Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL
+
+![Conexión de Power BI a la base de datos](img/conexion_postgres.png)
 
 ## Despliegue de la API:
 
