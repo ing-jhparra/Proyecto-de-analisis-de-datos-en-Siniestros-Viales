@@ -70,9 +70,9 @@ COPY (SELECT v.codigo_siniestro, v.fecha, v.sexo_victima, v.edad_victima, v.fech
 ```
 Aca la estructura sql de la [base de datos](sql/2_base_de_datos_siniestros_viales.sql) 
 
-Y el [diccionario de base de datos](sql/diccionario_datos.csv) en formato csv
+Y el [diccionario de datos](sql/diccionario_datos.csv) en formato csv
 
-Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL
+Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque en servidor la direccion IP (Ejemplo 196.81.221.106:5433), nombre de la base de dato (Ejemplo siniestros_viales) y dele clic al botón **Aceptar**
 
 ![Conexión de Power BI a la base de datos](img/conexion_postgres.png)
 
