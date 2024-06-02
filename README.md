@@ -1,4 +1,4 @@
-![Machine Learning Operations (MLOps)](img/seguridad_vial.jpg)
+![Proyecto de análisis de datos en Siniestros Viales)](img/seguridad_vial.jpg)
 
 # Contenido
 
@@ -57,7 +57,7 @@ Adicionalmente, se utilizó la base de datos para generar conjuntos de datos esp
 
 Este enfoque basado en utilizar una base de datos PostgreSQL, Docker, permitió crear un modelo de datos robusto, flexible y escalable, que a su vez sirvió como base para la generación de reportes, y la obtención de insights valiosos para el negocio.
 
-![Modelo de Datos](img/modelo_datos.jpg)
+![Modelo de Datos](img/modelo_datos.png)
 
 ## Despliegue de la API:
 
