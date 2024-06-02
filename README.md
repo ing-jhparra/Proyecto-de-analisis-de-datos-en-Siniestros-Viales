@@ -41,18 +41,14 @@ Machine Learning está transformando diversos sectores : Salud, Finanzas, Market
 
 Ambiente de base de datos 
 
-- Ambiente de base de Datos<br>
-
-<center>
+- Ambiente de base de Datos<br><center>
 ![Debian](https://img.shields.io/badge/Debian-D70A53?style=for-the-badge&logo=debian&logoColor=white)
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 </center>
 <br>
 
-- Ambiente de Desarrollo<br>
-
-<center>
+- Ambiente de Desarrollo<br><center>
 ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
 ![Pandas](https://img.shields.io/badge/-Pandas-333333?style=flat&logo=pandas)
 ![Numpy](https://img.shields.io/badge/-Numpy-333333?style=flat&logo=numpy)
@@ -63,9 +59,7 @@ Ambiente de base de datos
 </center>
 <br>
 
-- Desarrollo del Dashboard<br>
-
-<center>
+- Desarrollo del Dashboard<br<center>
 ![Power BI](https://img.shields.io/badge/PowerBI-333333?style=flat&logo=powerbi)
 ![DAX](https://img.shields.io/badge/-DAX-333333?style=flat&logo=powerbi)
 </center>
