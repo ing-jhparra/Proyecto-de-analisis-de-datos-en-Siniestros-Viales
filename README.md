@@ -68,17 +68,9 @@ COPY (SELECT v.codigo_siniestro, v.fecha, v.sexo_victima, v.edad_victima, v.fech
       INNER JOIN tipo_rol tr ON v.id_tiporol = tr.id_tiporol ) TO '/tmp/victimas.csv' DELIMITER ';' CSV HEADER;
 
 ```
-A se deja la estructura sql de la base de datos
+Aca la estructura sql de la [base de datos](sql/2_base_de_datos_siniestros_viales.sql) 
 
-![Estructura de Base de datos](sql/2_base_de_datos_siniestros_viales.sql)
-
-Y el diccionario de base de datos de la base de datos 
-
-![Diccionario de base de datos](sql/diccionario_datos.csv)
-
-diccionario_datos
-
-
+Y el [diccionario de base de datos](sql/diccionario_datos.csv) en formato csv
 
 
 ## Despliegue de la API:
