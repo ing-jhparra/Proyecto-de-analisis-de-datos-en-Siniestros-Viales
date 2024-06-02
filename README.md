@@ -59,6 +59,28 @@ Este enfoque basado en utilizar una base de datos PostgreSQL, Docker, permitió 
 
 ![Modelo de Datos](img/modelo_datos.png)
 
+Un ejemplo de como se exporto a csv, informacion a partir de una consulta
+ que luego sería utilizada en Python
+
+```bash
+-- Exporta la tabla siniestros
+COPY (SELECT v.codigo_siniestro, v.fecha, v.sexo_victima, v.edad_victima, v.fecha_fallecimiento FROM victimas v 
+      INNER JOIN tipo_rol tr ON v.id_tiporol = tr.id_tiporol ) TO '/tmp/victimas.csv' DELIMITER ';' CSV HEADER;
+
+```
+A se deja la estructura sql de la base de datos
+
+![Estructura de Base de datos](sql/2_base_de_datos_siniestros_viales.sql)
+
+Y el diccionario de base de datos de la base de datos 
+
+![Diccionario de base de datos](sql/diccionario_datos.csv)
+
+diccionario_datos
+
+
+
+
 ## Despliegue de la API:
 
 **Utilización de Render o Railway**: Utilizar una plataforma de despliegue como Render o Railway para alojar la API y hacerla accesible en la web.
