@@ -25,15 +25,46 @@
 * [Créditos](#Créditos)
 
 # Introducción
-El Machine Learning, o Aprendizaje Automático, ha revolucionado la tecnología actual, impulsando la innovación en diversos campos. Es una rama de la Inteligencia Artificial que dota a las máquinas de la capacidad de aprender y mejorar su rendimiento de forma autónoma, sin necesidad de programación explícita.
 
-Machine Learning está transformando diversos sectores : Salud, Finanzas, Marketing, Manufactura, Transporte, y seguirá evolucionando a pasos agigantados, impulsado por el aumento de datos disponibles, el desarrollo de algoritmos más potentes y la mayor accesibilidad a la computación en la nube. Se espera que tenga un impacto aún mayor en la sociedad, mejorando la calidad de vida y creando nuevas oportunidades en diversos campos.
+Los siniestros viales, conocidos también como accidentes de tránsito, son un problema de salud pública que impacta de manera negativa a ciudades de todo el mundo, incluyendo Buenos Aires. Estos eventos, que involucran a vehículos en las vías públicas, pueden tener consecuencias que van desde daños materiales hasta lesiones graves o fatales para los involucrados.
 
+En una ciudad densamente poblada y con un alto volumen de tráfico como Buenos Aires, los siniestros viales representan una preocupación importante. Estos hechos no solo afectan la seguridad de los residentes y visitantes, sino que también pueden tener un efecto significativo en la infraestructura vial, los servicios de emergencia y la calidad de vida en general.
 
 # Propuesta
 
+### Limpieza y preparación de datos:
+
+* Se realizará una búsqueda exhaustiva de valores faltantes, outliers y registros duplicados. Se aplicarán las técnicas adecuadas para tratar estos casos, como la eliminación de registros incompletos o la imputación de valores faltantes.
+* Se verificará la consistencia y validez de los datos, asegurando que los valores estén dentro de rangos razonables y que no existan incoherencias.
+
+### Análisis descriptivo:
+
+- Se utilizarán medidas de resumen como la **media**, **mediana**, **moda**, **desviación estándar**, **rango** y **cuartiles** para describir las variables numéricas.
+- Para las variables categóricas, se calcularán frecuencias y porcentajes, además de medidas de asociación como el chi-cuadrado o el índice de correlación de Cramer.
+- Se elaborarán gráficos y tablas adecuados para visualizar la distribución de las variables y las relaciones entre ellas. Se utilizarán histogramas, diagramas de cajas, gráficos de barras y dispersión, entre otros.
+
+### Conclusiones y recomendaciones:
+
+- Se sintetizarán los hallazgos más importantes del EDA, destacando las características principales del conjunto de datos, los patrones identificados y las posibles anomalías.
+
+- Se formularán recomendaciones para el tratamiento posterior de los datos, en función de los resultados obtenidos. Esto puede incluir la transformación de variables, la selección de subconjuntos de datos o la aplicación de técnicas de reducción de dimensionalidad.
 
 # Los Datos
+
+El conjunto de datos entregado para el estudio, consta de un archivo Excel que puede descargarlo [aquí](datasets/homicidios.xlsx), este se encuentra estructurado en cuatro hojas, dos de las las cuales vienen organizados en columnas y las otras dos es información que describen los mismos. La primera hoja llamada **HECHOS**, contiene 20 columnas de datos representados entre datos cualitativos (nominales y categoricos) y numericos, este conjunto suman **696 registros**, luego la hoja siguiente **DICCIONARIO_HECHOS**, como fue mencionado es informativa, describe las 20 variables de la hoja de **HECHOS**. Y tenemos la hoja de **VICTIMAS** que contiene 10 columnas y **717 registros**, de manera similar tiene asociado una hoja de **DICCIONARIO_VICTIMAS** que describe sus campos
+
+En relación al tipo de datos se pueden observar las siguientes imágenes
+
+de HECHOS 
+
+![Tipo de datos de HECHOS](img/tipo_datos_hechos.png)
+
+y de VICTIMAS
+
+![Tipo de datos de VICTIMAS](img/tipo_datos_victimas.png)
+
+
+Finalmente los datos fueron entregado por nuestro cliente **Observatorio de Movilidad y Seguridad Vial (OMSV)**, centro de estudios que se encuentra bajo la órbita de la **Secretaría de Transporte del Gobierno de la Ciudad Autónoma de Buenos Aires**.
 
 
 
@@ -63,10 +94,6 @@ Ambiente de base de datos
 ![Power BI](https://img.shields.io/badge/PowerBI-333333?style=flat&logo=powerbi)
 ![DAX](https://img.shields.io/badge/-DAX-333333?style=flat&logo=powerbi)
 </center>
-
-
-
-
 
 
 # Análisis Exploratorio de Datos (EDA):
@@ -101,6 +128,8 @@ Aca la estructura sql de la [base de datos](sql/2_base_de_datos_siniestros_viale
 
 Y el [diccionario de datos](sql/diccionario_datos.csv) en formato csv
 
+De igual modo junto un backup de la base de datos [base de datos](sql/siniestros_viales-202406021035.sql)
+
 Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque en servidor la direccion IP y el puerto (Ejemplo **196.81.221.106:5433**), nombre de la base de datos (Ejemplo **siniestros_viales**) y haz clic al botón **Aceptar**
 
 ![Conexión de Power BI a la base de datos](img/conexion_postgres.png)
@@ -115,157 +144,15 @@ El dataset que se presenta a continuación contiene información sobre reseñas 
 
 Los datasets pasaran por un proceso ETL, con el propósito de limpiar, transformar y preparar los datos para su análisis posterior. El Análisis Exploratorio de Datos (EDA) se enfocará en explorar las relaciones entre las variables, identificar patrones y obtener una comprensión profunda de las características de las reseñas y los juegos.
 
-### user_review.parquet: Contiene las siguientes atributos o columnas:
-
-* user_id             :  identificador del usuario
-* item_id             :  identificador del juego o producto
-* recommend           :  Recomendacion positiva o negativa por parte del usuario
-* review              :  opinion del jugador dada al juego
-* sentiment_analysis  :  un valor dado al juego (0 = malo, 1 = neutral, 2 = positivo)
-
-### developer.parquet: Contiene las siguientes atributos o columnas:
-
-* year                :  año de publicacion          
-* item_id             :  identificador del juego o producto
-* price               :  precio del juego
-* developer           :  empresa desarrolladora
-
-### sentiment_analysis.parquett: Contiene las siguientes atributos o columnas:
-
-* user_id             :  identificador del usuario
-* item_id             :  identificador del juego o producto
-* recommend           :  Recomendacion positiva o negativa por parte del usuario
-* review              :  opinion del jugador dada al juego
-* sentiment_analysis  :  un valor dado al juego (0 = malo, 1 = neutral, 2 = positivo)
-* item_name           :  nombre del juego o producto
-
-### users_items.parquet: Contiene las siguientes atributos o columnas:
-
-* genres              :  genero al que pertenece el juego o producto
-* title               :  titulo del juego o producto
-* year                :  año de publicacion
-* price               :  precio del juego
-* developer           :  empresa desarrolladora
-* item_id             :  identificador del juego o producto
-
-# Modelo Similitud del Coseno
-
-Es una herramienta interesante que podemos utilizar en el análisis de grafos. Este se encarga de conocer el ángulo entre dos vectores n-dimensionales en un espacio n-dimensional. Esto siginifica que el resultado que obtenemos es el **producto escalar de los dos vectores dividido por el producto de las longitudes o magnitudes de los dos vectores**.
-
-Dentro de la similitud de coseno dos vectores con la misma orientación tienen una similitud de coseno de 1 , dos vectores orientados a 90° entre sí tienen una similitud de 0, y dos vectores diametralmente opuestos tienen una similitud de -1, independientemente de su magnitud.
-
-Como debemos implementarlo en nuestro codigo
-
-```bash
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-```
-Instanciamos la clase TfidfVectorizer, luego entrena y aplica la transformacion.
-
-```bash
-vectorizer = TfidfVectorizer()
-tfidf_matrix = vectorizer.fit_transform(df_sentiment_analysis["review"])
-```
 En el proceso de analisis podemos observar a traves de una nube de palabras los mas jugados
 
-![Los mas Jugados](img/nube_palabras2.png)
 
-
-# Api
-
-<h4 align="center">
-:construction: Tema en desarrollo :construction:
-</h4>
-
-La Api
-
-![Sistema de Recomendacion de videojuegos)](img/api.png)
-
-developer
-
-Para probar ingrese :
-
-Valve
-
-![Informacion de una empresa desarrolladora)](img/desarrollador.png)
-
-Respuesta
-
-![Respuesta esperada)](img/respuesta_desarrollador.png)
-
-userdata
-
-Para probar ingrese :
-
-Walker1183 <br>
-farnellthedog
-
-![Informacion de un usuario)](img/userdata.png)
-
-Respuesta
-
-![Respuesta esperada)](img/respuesta_userdata.png)
-
-recomendacion por juego
-
-Para probar ingrese :
-
-11610 <br>
-25000
-
-![Informacion de un usuario)](img/recomendacion_juego_item.png)
-
-Respuesta
-
-![Respuesta esperada)](img/respuesta_item.png)
-
-recomendacion por usuario
-
-Para probar ingrese :
-
-Killyis <br>
-farnellthedog
-
-![Informacion de un usuario)](img/recomendacion_juego_usuario.png)
-
-Respuesta
-
-![Respuesta esperada)](img/respuesta_user.png)
-
-
-[Si quiere ir directo a la Api en Render, clic aqui](https://sistema-de-recomendacion-de-videojuegos-a6c3.onrender.com/docs)
 
 # Recursos
 
-## Imagen Docker con Uvicorn/Guinicorn para aplicaciones web de alta performance:
+* [¿Cuáles son las principales causas de accidentes de tránsito?](https://satrack.com/ec/blog/cuales-son-las-principales-causas-de-accidentes-de-transito/)
 
-* [tiangolo/uvicorn-gunicorn-fastapi](https://hub.docker.com/r/tiangolo/uvicorn-gunicorn-fastapi/) <br>
-
-* [uvicorn-gunicorn-fastapi-docker](https://github.com/tiangolo/uvicorn-gunicorn-fastapi-docker) <br>
-
-## FAST API Documentation:
-
-* [Tutorial - User Guide](https://fastapi.tiangolo.com/tutorial/) <br>
-
-## Gradio:
-
-* [Build & share delightful machine learning apps](https://www.gradio.app/) <br>
-
-## Sistemas de Recomendación:
-
-* [awesome-RecSys](https://github.com/juliom86/awesome-RecSys) <br>
-
-* [Sistemas de Recomendación: Similitud del Coseno aplicado con #Python](https://www.youtube.com/watch?v=7nago29IlxM&t=151s)
-
-## "Prolijidad" del codigo:
-
-* [About docstrings and standards](https://pandas.pydata.org/docs/development/contributing_docstring.html) <br>
-
-## Otros 
-
-* [Introduction to Exploratory Data Analysis (EDA)](https://learn.toanhoang.com/courses/take/creating-bespoke-data-visualisations-in-tableau-part-one/lessons/18775341-index-function)
-
-* [Análisis exploratorio de datos (EDA)](https://es.r4ds.hadley.nz/07-eda.html)
+* [11 medidas para la prevención de accidentes de tráfico](https://www.alimentatubienestar.es/prevencion-de-accidentes-de-trafico/)* [Análisis exploratorio de datos (EDA)](https://es.r4ds.hadley.nz/07-eda.html)
 
 # Créditos
 Copyright (c) 2024 [Ing. Jesús parra] parra.jesus@gmail.com

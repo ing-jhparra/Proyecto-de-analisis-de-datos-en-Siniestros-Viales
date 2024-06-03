@@ -284,21 +284,33 @@ COPY comuna FROM '/tmp/comunas.csv' DELIMITER ';' CSV HEADER;
 ALTER  TABLE  siniestros
     ADD CONSTRAINT fk_siniestros_comuna FOREIGN KEY (id_comuna) REFERENCES comuna(id_comuna);
 
-
--- select * from siniestros where comuna = 0
-SELECT s.comuna, count(*) 
-FROM siniestros s 
-INNER JOIN victimas v ON s.id_victima = v.id_victima 
-GROUP BY 1
-ORDER BY 2 DESC 
-
-
-
-     
-     
+    
 /*
  * Consultas
  */
+
+SELECT EXTRACT(YEAR FROM fecha) AS anho, TO_CHAR(fecha,'MMDD') mes_dia FROM siniestros s 
+   
+-- KPI #2
+-- el id 9 es MOTO como victima
+SELECT sum(cantidad_victimas) FROM siniestros s
+WHERE EXTRACT(YEAR FROM s.fecha) IN (2020) AND s.id_tipovictima =9 
+
+SELECT sum(cantidad_victimas) FROM siniestros s
+WHERE EXTRACT(YEAR FROM s.fecha) IN (2021) AND s.id_tipovictima =9 
+
+--
+-- Consultar tipo participante 
+SELECT tp.tipo_participantes, count(*) FROM siniestros s 
+INNER JOIN tipo_participante tp ON s.id_tipoparticipante = tp.id_tipoparticipante 
+GROUP BY 1
+ORDER BY 2 DESC 
+LIMIT 5
+
+-- Consultar tipo victima y numero de victima
+SELECT tv.tipo_victima , count(*) FROM siniestros s 
+INNER JOIN tipo_victima tv ON s.id_tipovictima = tv.id_tipovictima 
+GROUP BY 1
 
    
 -- Victimas Por año
@@ -364,8 +376,10 @@ GROUP BY 1
 -- El siguiente script se puede utilizar para crear un diccionario de datos
    
 SELECT 
-table_name,
-column_name
+table_name AS nombre_tabla,
+column_name AS nombre_columna,
+data_type AS tipo_datos,
+numeric_precision AS precision_numerica
 FROM INFORMATION_SCHEMA.COLUMNS 
-WHERE table_name IN ('hechos_lesiones','victimas_pp','hechos_homicidios','victimas_homicidios') 
+WHERE table_name IN ('siniestros','victimas','tipo_acusado','tipo_calle','tipo_participante','tipo_rol','tipo_victima','comuna') 
 ORDER BY table_name
