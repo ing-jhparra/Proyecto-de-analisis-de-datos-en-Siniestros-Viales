@@ -1,4 +1,4 @@
-![Proyecto de análisis de datos en Siniestros Viales)](img/seguridad_vial.jpg)
+![Proyecto de análisis de datos en Siniestros Viales](img/siniestro_vial_cuadro.png)
 
 # Contenido
 
@@ -68,7 +68,7 @@ Finalmente los datos fueron entregado por nuestro cliente **Observatorio de Movi
 
 
 
-# Tecnólogias utilizadas
+# Tecnologías utilizados
 
 Ambiente de base de datos 
 
