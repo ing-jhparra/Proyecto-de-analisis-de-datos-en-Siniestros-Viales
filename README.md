@@ -1,4 +1,4 @@
-![Proyecto de análisis de datos en Siniestros Viales](img/siniestro_vial_cuadro.png)
+![Proyecto de análisis de datos en Siniestros Viales](img/siniestro_vial.jpg)
 
 # Contenido
 
