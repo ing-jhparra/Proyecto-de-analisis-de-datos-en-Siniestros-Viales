@@ -110,10 +110,15 @@ A través de este proceso que corresponde al EDA, obtendremos una visión genera
 Entonces a continuación mostraremos algunas características de los datos, patrones y tendencias, incluyendo anomalías.
 
 **Tipos de datos**
-Dataframe homicidios_hechos <br />
+ <br />
+- Dataframe homicidios_hechos 
+<br />
+
 ![Estructura de datos del dataframe homicidios_hechos](img/hechos_estructura.png) 
 
-Dataframe homicidios_victimas <br />
+- Dataframe homicidios_victimas 
+<br />
+
 ![Estructura de datos del dataframe homicidios_victimas](img/victimas_estructura.png) 
 
 
