@@ -17,7 +17,7 @@
 
 * [Tecnologías utilizados](#Tecnologías-utilizados)
 
-* [Análisis Exploratorio de Datos (EDA)](#Análisis-Exploratorio-de-Datos-(EDA))
+* [Análisis Exploratorio de Datos](#Análisis-Exploratorio-de-Datos)
 
 * [El Modelo de Datos](#El-Modelo-de-Datos)
 
@@ -103,7 +103,7 @@ Ambiente de base de datos
 </center>
 
 
-# Análisis Exploratorio de Datos (EDA):
+# Análisis Exploratorio de Datos
 
 A través de este proceso que corresponde al EDA, obtendremos una visión general de la estructura de los datos, la calidad y las relaciones entre las variables. Este conocimiento fundamental será esencial para guiar nuestros pasos posteriores del análisis, que va desde la limpieza, la preparación o tratamiento, hasta la construcción de un modelo de datos y la toma de decisiones informadas.
 
@@ -111,10 +111,10 @@ Entonces a continuación mostraremos algunas características de los datos, patr
 
 **Tipos de datos**
 Dataframe homicidios_hechos
-![Estructura de datos del dataframe homicidios_hechos](img/hechos_estructura.png) </br>
+![Estructura de datos del dataframe homicidios_hechos](img/hechos_estructura.png) 
 
 Dataframe homicidios_victimas
-![Estructura de datos del dataframe homicidios_victimas](img/victimas_estructura.png) </br>
+![Estructura de datos del dataframe homicidios_victimas](img/victimas_estructura.png) 
 
 
 
