@@ -17,7 +17,7 @@
 
 * [Tecnologías utilizados](#Tecnologías-utilizados)
 
-* [Análisis y Desarrollo de Datos (EDA)](Análisis-y-Desarrollo-de-los-Datos-(EDA))
+* [Análisis Exploratorio de Datos (EDA)](#Análisis-Exploratorio-de-Datos-(EDA))
 
 * [El Modelo de Datos](#El-Modelo-de-Datos)
 
@@ -111,10 +111,10 @@ Entonces a continuación mostraremos algunas características de los datos, patr
 
 **Tipos de datos**
 Dataframe homicidios_hechos
-![Estructura de datos del dataframe homicidios_hechos](img/hechos_estructura.png) </b>
+![Estructura de datos del dataframe homicidios_hechos](img/hechos_estructura.png) </br>
 
 Dataframe homicidios_victimas
-![Estructura de datos del dataframe homicidios_victimas](img/victimas_estructura.png) </b>
+![Estructura de datos del dataframe homicidios_victimas](img/victimas_estructura.png) </br>
 
 
 
