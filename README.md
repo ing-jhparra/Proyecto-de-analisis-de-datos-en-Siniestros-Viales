@@ -1,4 +1,11 @@
-![Proyecto de análisis de datos en Siniestros Viales](img/siniestro_vial.jpg)
+<div align="center">
+  <h1 align="center">
+    Análisis de datos sobre los Siniestros Viales
+      <br />
+      <img src="./img/siniestro_vial.jpg" alt="Siniestros Viales">
+      <br />
+  </h1>
+</div>
 
 # Contenido
 
@@ -98,8 +105,17 @@ Ambiente de base de datos
 
 # Análisis Exploratorio de Datos (EDA):
 
+A través de este proceso que corresponde al EDA, obtendremos una visión general de la estructura de los datos, la calidad y las relaciones entre las variables. Este conocimiento fundamental será esencial para guiar nuestros pasos posteriores del análisis, que va desde la limpieza, la preparación o tratamiento, hasta la construcción de un modelo de datos y la toma de decisiones informadas.
 
-# Modelo de Aprendizaje Automático:
+Entonces a continuación mostraremos algunas características de los datos, patrones y tendencias, incluyendo anomalías.
+
+**Tipos de datos**
+Dataframe homicidios_hechos
+![Estructura de datos del dataframe homicidios_hechos](img/hechos_estructura.png) </b>
+
+Dataframe homicidios_victimas
+![Estructura de datos del dataframe homicidios_victimas](img/victimas_estructura.png) </b>
+
 
 
 
