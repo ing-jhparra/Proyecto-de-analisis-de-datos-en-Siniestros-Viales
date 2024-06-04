@@ -110,10 +110,10 @@ A través de este proceso que corresponde al EDA, obtendremos una visión genera
 Entonces a continuación mostraremos algunas características de los datos, patrones y tendencias, incluyendo anomalías.
 
 **Tipos de datos**
-Dataframe homicidios_hechos
+Dataframe homicidios_hechos <br />
 ![Estructura de datos del dataframe homicidios_hechos](img/hechos_estructura.png) 
 
-Dataframe homicidios_victimas
+Dataframe homicidios_victimas <br />
 ![Estructura de datos del dataframe homicidios_victimas](img/victimas_estructura.png) 
 
 
@@ -149,20 +149,6 @@ De igual modo junto un backup de la base de datos [base de datos](sql/siniestros
 Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque en servidor la direccion IP y el puerto (Ejemplo **196.81.221.106:5433**), nombre de la base de datos (Ejemplo **siniestros_viales**) y haz clic al botón **Aceptar**
 
 ![Conexión de Power BI a la base de datos](img/conexion_postgres.png)
-
-## Despliegue de la API:
-
-**Utilización de Render o Railway**: Utilizar una plataforma de despliegue como Render o Railway para alojar la API y hacerla accesible en la web.
-
-## Dataset
-
-El dataset que se presenta a continuación contiene información sobre reseñas de juegos realizadas por usuarios. Esta valiosa colección de datos ofrece una oportunidad única para comprender las preferencias de los jugadores, identificar patrones en las reseñas y desarrollar sistemas de recomendación de juegos más efectivos.
-
-Los datasets pasaran por un proceso ETL, con el propósito de limpiar, transformar y preparar los datos para su análisis posterior. El Análisis Exploratorio de Datos (EDA) se enfocará en explorar las relaciones entre las variables, identificar patrones y obtener una comprensión profunda de las características de las reseñas y los juegos.
-
-En el proceso de analisis podemos observar a traves de una nube de palabras los mas jugados
-
-
 
 # Recursos
 
