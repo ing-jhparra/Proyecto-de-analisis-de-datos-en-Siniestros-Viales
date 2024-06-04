@@ -186,7 +186,34 @@ plt.show()
 
 ![Valores atipicos en victimas](img/outliers_siniestros_2.png) 
 
-Y observamos que poedmeos llegar a la conclusión que para esta variable cantidse encuentra limpia y sin valores sucios.
+Y observamos que poedmeos llegar a la conclusión que para esta variable edad_victima se encuentra limpia y sin valores sucios.
+
+### Gráficas de Variables Continua
+
+Esta gráficas nos permite observar la distribución de los datos, puede evidenciarse que las victimas estaban cerca de los 40 años.
+
+![Distribución de los datos](img/grafica_1.png.png)
+
+Estamos observando un patrón en la que baja el numero de victimas despues del año 2018, esto pudiera deberse a la concientización de la ciudadania en relación a la prevención vial, otra razon del punto mas bajo para el año 2021 fue causado por la epidemia del **COVID19**  luego de esto los indices de siniestros viales van en aumento.
+
+![Distribución de los datos](img/grafica_3.png)
+
+### Gráficas de Variables Cualitativa
+
+Encontramos que existe un porcentaje alto de victimas altos, en la que pudieramos indicar que por la naturaleza de tomar riesgos conductuales, biologia, entre otros aspecto
+
+![Distribución de los datos](img/grafica_4.png)
+
+Se creo una nueva variable edad_etaria para agrupar las edades y hemos encontrado que las victimas se encuentra en el rango de los 26 hasta 40 años
+
+![Distribución de los datos](img/edad_rango.png)
+
+
+Utilizando una gráfica de nube de palabras observamos con letras mas grandes el nombre de la calle que mas siniestros tiene.
+
+![Distribución de los datos](img/nube_palabras.png)
+
+
 
 # El Modelo de Datos
 
@@ -220,6 +247,8 @@ Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque
 ![Conexión de Power BI a la base de datos](img/conexion_postgres.png)
 
 # Recursos
+
+* [Campaña francesa de concienciación para peatones | Subtitulado español](https://www.youtube.com/watch?v=ufxg_FghFAc)
 
 * [¿Cuáles son las principales causas de accidentes de tránsito?](https://satrack.com/ec/blog/cuales-son-las-principales-causas-de-accidentes-de-transito/)
 
