@@ -121,6 +121,19 @@ Entonces a continuación mostraremos algunas características de los datos, patr
 
 ![Estructura de datos del dataframe homicidios_victimas](img/victimas_estructura.png) 
 
+### Outliers
+Busquemos valores atipicos en nuestros datos
+
+
+![Valores atipicos en victimas](img/outliers_victimas.png) 
+
+Estamos observando en estos datos que existen valores atipicos, pero existe una razón de valor y es que en la mayoria de los siniestros registrado, la cantidad de victimas fatales no pasan de uno o dos, y algunos casos se registran 3 victimas fatales, entonces considerar estos numeros aportan valor a nuestro estudio.
+
+Con algo de codigo, hemos probado detectar outliers utilizando la regla de 3 desviaciones estándar
+
+![Valores atipicos en victimas](img/outliers_victimas_2.png) 
+
+outliers_victimas_2
 
 
 
