@@ -122,25 +122,45 @@ Entonces a continuación mostraremos algunas características de los datos, patr
 ![Estructura de datos del dataframe homicidios_victimas](img/victimas_estructura.png) 
 
 ### Outliers
-Busquemos valores atipicos en nuestros datos
+Busquemos valores atipicos en nuestros datos, utilizando el metodo **describe()**
+
+```bash
+# Buscando outliers en la variables cantidad_victimas
+siniestros["cantidad_victimas"].describe()
+```
 
 
 ![Valores atipicos en victimas](img/outliers_victimas.png) 
 
 Estamos observando en estos datos que existen valores atipicos, pero existe una razón de valor y es que en la mayoria de los siniestros registrado, la cantidad de victimas fatales no pasan de uno o dos, y algunos casos se registran 3 victimas fatales, entonces considerar estos numeros aportan valor a nuestro estudio.
 
-Con algo de codigo, hemos probado detectar outliers utilizando la regla de 3 desviaciones estándar
+Con algo de codigo, detectemos outliers utilizando la regla de 3 desviaciones estándar
+
+```bash
+# Calcular media y la desviación estándar
+media = victimas['edad_victima'].mean()
+desviacion_estandar = victimas['edad_victima'].std()
+
+# Definamos los límite para outliers (3σ)
+limite_outlier = 3 * desviacion_estandar
+
+# Detectemos los outliers aplicando la formula 
+outliers = victimas[abs(victimas['edad_victima'] - media) > limite_outlier]
+
+# Observemos los resultados 
+print(f"Outliers detectados: {outliers}")
+```
 
 ![Valores atipicos en victimas](img/outliers_victimas_2.png) 
 
-Para el caso de la variable edad, esta fue tratada de lado de PostgreSQL, se ejecuto la siguiente sentencia sql  para imputar todo valor SD
+Para el caso de la variable **edad_victima**, esta fue tratada de lado de PostgreSQL, se ejecuto la siguiente sentencia sql  para imputar todo valor SD
 
 ```bash
 -- Se calcula la media para imputar donde no tenemos valores, luego la media es 42 años 
 SELECT ROUND(AVG(cast(edad_victima  AS integer)),0) FROM victimas v
 WHERE edad_victima != 'SD' AND cast(edad_victima  AS integer) < 100
 ```
-Luego de concoer la media se ejecuto la siguiente sentencia para actualizar donde fuera necesario.
+Obtenida la media, se ejecuto la sentencia de actualización sobe los registros con valor **SD**
 
 ```bash
 -- El 42 viene de calcular la media 
@@ -148,10 +168,25 @@ UPDATE victimas
 SET edad_victima = '42'
 WHERE edad_victima = 'SD'
 ```
-Se continua desde python el analisis para generar la siguiente gráfica buscando outliers
+Continuamos desde python el analisis para generar la siguiente gráfica buscando outliers
+
+```bash
+# Ajustar el tamaño de la figura
+plt.figure(figsize=(6, 4))
+
+# Crear subplots para los gráficos 
+plt.subplot(1, 1, 1) 
+sns.boxplot(data=victimas, y='edad_victima', color = "#FA8072")
+plt.ylabel('Edad')
+# Ajustar espaciado entre subplots
+plt.tight_layout()
+
+plt.show()
+```
 
 ![Valores atipicos en victimas](img/outliers_siniestros_2.png) 
 
+Y observamos que poedmeos llegar a la conclusión que para esta variable cantidse encuentra limpia y sin valores sucios.
 
 # El Modelo de Datos
 
