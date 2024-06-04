@@ -133,8 +133,24 @@ Con algo de codigo, hemos probado detectar outliers utilizando la regla de 3 des
 
 ![Valores atipicos en victimas](img/outliers_victimas_2.png) 
 
-outliers_victimas_2
+Para el caso de la variable edad, esta fue tratada de lado de PostgreSQL, se ejecuto la siguiente sentencia sql  para imputar todo valor SD
 
+```bash
+-- Se calcula la media para imputar donde no tenemos valores, luego la media es 42 años 
+SELECT ROUND(AVG(cast(edad_victima  AS integer)),0) FROM victimas v
+WHERE edad_victima != 'SD' AND cast(edad_victima  AS integer) < 100
+```
+Luego de concoer la media se ejecuto la siguiente sentencia para actualizar donde fuera necesario.
+
+```bash
+-- El 42 viene de calcular la media 
+UPDATE victimas
+SET edad_victima = '42'
+WHERE edad_victima = 'SD'
+```
+Se continua desde python el analisis para generar la siguiente gráfica buscando outliers
+
+![Valores atipicos en victimas](img/outliers_siniestros_2.png) 
 
 
 # El Modelo de Datos
