@@ -248,6 +248,7 @@ Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque
 
 # Indicador clave de rendimiento
 
+**KPI 1**
 Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior.
 
 - Formula 
@@ -255,8 +256,7 @@ Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos sei
 
 Para este indicador concluimos que fue exitosos el conseguir alcanzar la meta que es reducir la tasa de homicidios en siniestros en el ultimo semestre
 
-Colocar la grafica
-
+**KPI 2**
 Reducir en un 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior
 
 - Formula
