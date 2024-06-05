@@ -288,9 +288,22 @@ ALTER  TABLE  siniestros
 /*
  * Consultas
  */
-
-SELECT EXTRACT(YEAR FROM fecha) AS anho, TO_CHAR(fecha,'MMDD') mes_dia FROM siniestros s 
    
+   
+ SELECT tr.rol, count(*) FROM siniestros s 
+ INNER JOIN tipo_calle tc ON s.id_tipocalle = tc.id_tipocalle 
+ INNER JOIN victimas v ON s.id_victima = v.id_victima 
+ INNER JOIN tipo_rol tr ON v.id_tiporol = tr.id_tiporol 
+ WHERE tc.tipo_calle = 'AVENIDA'
+ GROUP BY 1
+ 
+ SELECT v.sexo_victima, s.edad_etaria,  count(*)  FROM siniestros s 
+ INNER JOIN tipo_calle tc ON s.id_tipocalle = tc.id_tipocalle 
+ INNER JOIN victimas v ON s.id_victima = v.id_victima
+ WHERE tc.tipo_calle = 'AVENIDA' AND CAST(v.edad_victima AS integer) > 26
+ GROUP BY 1,2
+ ORDER BY 2
+ 
 -- KPI #2
 -- el id 9 es MOTO como victima
 SELECT sum(cantidad_victimas) FROM siniestros s
@@ -311,6 +324,7 @@ LIMIT 5
 SELECT tv.tipo_victima , count(*) FROM siniestros s 
 INNER JOIN tipo_victima tv ON s.id_tipovictima = tv.id_tipovictima 
 GROUP BY 1
+ORDER BY 2 DESC 
 
    
 -- Victimas Por año
@@ -319,17 +333,37 @@ RIGHT JOIN victimas v ON s.id_victima = v.id_victima
 GROUP BY 1,2, EXTRACT(YEAR FROM s.fecha)
 ORDER BY 1
 
+SELECT tr.rol , count(*) FROM siniestros s	 
+INNER JOIN victimas v ON s.id_victima = v.id_victima  
+INNER JOIN tipo_rol tr ON v.id_tiporol = tr.id_tiporol 
+WHERE EXTRACT(YEAR FROM s.fecha) =  2020 -- AND EXTRACT(YEAR FROM s.fecha) <= 2021
+GROUP BY 1
+
+SELECT * FROM comuna c 
+
+SELECT sum(s.cantidad_victimas) FROM siniestros s 
+INNER JOIN victimas v ON s.id_siniestro = v.id_victima 
+WHERE s.id_comuna = 9 AND EXTRACT(MONTH FROM s.fecha) = 8
+	
+SELECT v.sexo_victima, count(*) FROM siniestros s 
+INNER JOIN victimas v ON s.id_victima = v.id_victima 
+INNER JOIN tipo_victima tv ON s.id_tipovictima = tv.id_tipovictima 
+WHERE tv.tipo_victima = 'MOTO'
+GROUP BY 1
+
 
 -- Victimas por rango de edades por año
 SELECT EXTRACT(YEAR FROM s.fecha), s.edad_etaria AS rango_edades, count(*) FROM siniestros s
 INNER JOIN victimas v ON s.id_victima = v.id_victima
 GROUP BY EXTRACT(YEAR FROM s.fecha), rango_edades
 
+-- Siniestros por Barrio
 SELECT c.barrios, EXTRACT(MONTH  FROM s.fecha), count(v.id_victima) AS cantidad FROM siniestros s 
 INNER JOIN victimas v ON s.id_victima = v.id_victima
 INNER JOIN comuna c ON s.id_comuna = c.id_comuna
 GROUP BY 1,2
 ORDER BY 2,3 DESC 
+LIMIT 5
 
 SELECT lugar_hecho, sum(v.id_victima) FROM siniestros s
 INNER JOIN victimas v ON s.id_victima = v.id_victima 
@@ -383,3 +417,5 @@ numeric_precision AS precision_numerica
 FROM INFORMATION_SCHEMA.COLUMNS 
 WHERE table_name IN ('siniestros','victimas','tipo_acusado','tipo_calle','tipo_participante','tipo_rol','tipo_victima','comuna') 
 ORDER BY table_name
+
+SELECT * FROM comuna c 
