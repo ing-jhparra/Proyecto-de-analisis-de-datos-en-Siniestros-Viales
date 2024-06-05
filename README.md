@@ -251,13 +251,17 @@ Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque
 **KPI 1**
 Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior.
 
+Se define la tasa de homicidios en siniestros viales como el número de víctimas fatales en accidentes de tránsito por cada 100,000 habitantes en un área geográfica durante un período de tiempo específico. Su fórmula es: (Número de homicidios en siniestros viales / Población total) * 100,000
+
 - Formula 
 **Tasa de homicidio en siniestros viales=(Numero de homicidio en siniestros viales/Poblacion total) * 100**
 
 Para este indicador concluimos que fue exitosos el conseguir alcanzar la meta que es reducir la tasa de homicidios en siniestros en el ultimo semestre
 
 **KPI 2**
-Reducir en un 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior
+Reducir en un 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior.
+
+Se define la cantidad de accidentes mortales de motociclistas en siniestros viales como el número absoluto de accidentes fatales en los que estuvieron involucradas víctimas que viajaban en moto en un determinado periodo temporal. Su fórmula para medir la evolución de los accidentes mortales con víctimas en moto es: (Número de accidentes mortales con víctimas en moto en el año anterior - Número de accidentes mortales con víctimas en moto en el año actual) / (Número de accidentes mortales con víctimas en moto en el año anterior) * 100
 
 - Formula
 **Cantidad de accidentes mortales de motociclista en siniestros viales = Valor Absoluto (Número de accidentes mortales en moto en el año anterior - Numero de accidentes mortales con victimas en moto en el año actual) / Numero de accidentes mortales con victimas en moto en el año anterior * 100**
