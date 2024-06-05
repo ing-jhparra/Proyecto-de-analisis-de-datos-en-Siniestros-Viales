@@ -21,9 +21,9 @@
 
 * [El Modelo de Datos](#El-Modelo-de-Datos)
 
-* [Indicador clave de rendimiento (KPI)](Indicador-clave-de-rendimiento)
+* [Indicador clave de rendimiento](#Indicador-clave-de-rendimiento)
 
-* [Conclusiones](#Conclusioes)
+* [Conclusiones](#Conclusiones)
 
 * [Recomendaciones](#Recomendaciones)
 
@@ -192,7 +192,7 @@ Y observamos que poedmeos llegar a la conclusión que para esta variable edad_vi
 
 Esta gráficas nos permite observar la distribución de los datos, puede evidenciarse que las victimas estaban cerca de los 40 años.
 
-![Distribución de los datos](img/grafica_1.png.png)
+![Distribución de los datos](img/grafica_1.png)
 
 Estamos observando un patrón en la que baja el numero de victimas despues del año 2018, esto pudiera deberse a la concientización de la ciudadania en relación a la prevención vial, otra razon del punto mas bajo para el año 2021 fue causado por la epidemia del **COVID19**  luego de esto los indices de siniestros viales van en aumento.
 
@@ -245,6 +245,44 @@ De igual modo junto un backup de la base de datos [base de datos](sql/siniestros
 Ya el paso siguiente es conectar Power BI a la base de datos PostgreSQL, coloque en servidor la direccion IP y el puerto (Ejemplo **196.81.221.106:5433**), nombre de la base de datos (Ejemplo **siniestros_viales**) y haz clic al botón **Aceptar**
 
 ![Conexión de Power BI a la base de datos](img/conexion_postgres.png)
+
+# Indicador clave de rendimiento
+
+Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior.
+
+- Formula 
+**Tasa de homicidio en siniestros viales=(Numero de homicidio en siniestros viales/Poblacion total) * 100**
+
+Para este indicador concluimos que fue exitosos el conseguir alcanzar la meta que es reducir la tasa de homicidios en siniestros en el ultimo semestre
+
+Colocar la grafica
+
+Reducir en un 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior
+
+- Formula
+**Cantidad de accidentes mortales de motociclista en siniestros viales = Valor Absoluto (Número de accidentes mortales en moto en el año anterior - Numero de accidentes mortales con victimas en moto en el año actual) / Numero de accidentes mortales con victimas en moto en el año anterior * 100**
+
+![Conexión de Power BI a la base de datos](img/kpi.png)
+
+# Conclusiones 
+
+Sobre el análisis exploratorio realizado en datos historico que comprende los periodos 2016 hasta el 2021, registraron 696 siniestros, sumando un total de 717 victimas fatales, lo cual obtuvimos los siguientes hallazgo :
+
+* La comuna número 1, que agrupa a Constitucion - Montserrat - Puerto Madero - Retiro - San Nicolas - San Telmo, es el área de mayor porcentaje de siniestros registrados con víctimas fatales.
+* Las avenidas como principales vías de acceso concentran un mayor registro de siniestros viales en la que se puede incluso evidenciar un alto porcentaje de peatones y conductores que suman como víctimas fatales.
+* Un porcentaje alto de las víctimas las representan el género masculino con edades comprendidas entre los 26 y 42 años.
+* En cuanto a los tipos de usuario, se pudo observar que la mayor parte de siniestros fatales siguen siendo los motorizados.
+
+# Recomendaciones
+
+* Crear programas de educación a niños y jóvenes para la movilidad segura y su prevención.
+* Preparar talleres de capacitación para ciudadanos con la importancia de reforzar la prevención y la seguridad vial.
+* Instalar dispositivos de control y prevención en Avenidas con mayor incidencias de siniestros fatales.
+* Concientizar a la población a través de medios televisivos y redes digitales lo importante del uso de cinturones de seguridad, sistemas de retención infantil, en el caso de motorizados utilización de cascos, chalecos reflectivos.
+* Mantener los vehiculos al dia con sus chequeos, neumáticos, motor y demas componentes que lo requeira
+* Verifica el estado de vias, avenidas y carreteras en cuanto a asfalto y señalización
+* Evitar ingerir alcohol, tomar un adecuado descanso.
+
 
 # Recursos
 
